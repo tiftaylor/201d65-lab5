@@ -35,7 +35,7 @@ function multiply(a, b) { //eslint-disable-line
 }
 
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
+// testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -52,11 +52,29 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+  var abSum = sum(a, b); 
+  var abfirstSumIndex = abSum[0]; // returns 11
+  var cSum = sum(abfirstSumIndex, c); 
+  var totalfirstSumIndex = cSum[0]; // returns 16
+  console.log('totalfirstSumIndex ' + totalfirstSumIndex); // returns 16
 
+  var abProduct = multiply(a, b); 
+  var abfirstProductIndex = abProduct[0]; // returns 28
+  var cProduct = multiply(abfirstProductIndex, c);
+  var totalfirstProductIndex = cProduct[0]; // returns 140
+  console.log('totalfirstProductIndex ' + totalfirstProductIndex);
+
+  var sumString = a + ' and ' + b + ' and ' + c + ' sum to ' + totalfirstSumIndex + '.';
+  var productString = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + totalfirstProductIndex + '.';
+
+  console.log([totalfirstSumIndex, totalfirstProductIndex, sumString, productString]);
+  //        16                      140                  string       string
+  return [totalfirstSumIndex, totalfirstProductIndex, sumString, productString];
+  
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
