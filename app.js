@@ -15,7 +15,7 @@ function sum(a, b) { //eslint-disable-line
 }
 
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -35,7 +35,7 @@ function multiply(a, b) { //eslint-disable-line
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -56,25 +56,25 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
   var abfirstSumIndex = abSum[0]; // returns 11
   var cSum = sum(abfirstSumIndex, c); 
   var totalfirstSumIndex = cSum[0]; // returns 16
-  console.log('totalfirstSumIndex ' + totalfirstSumIndex); // returns 16
+  // console.log('totalfirstSumIndex ' + totalfirstSumIndex); // returns 16
 
   var abProduct = multiply(a, b); 
   var abfirstProductIndex = abProduct[0]; // returns 28
   var cProduct = multiply(abfirstProductIndex, c);
   var totalfirstProductIndex = cProduct[0]; // returns 140
-  console.log('totalfirstProductIndex ' + totalfirstProductIndex);
+  // console.log('totalfirstProductIndex ' + totalfirstProductIndex);
 
   var sumString = a + ' and ' + b + ' and ' + c + ' sum to ' + totalfirstSumIndex + '.';
   var productString = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + totalfirstProductIndex + '.';
 
-  console.log([totalfirstSumIndex, totalfirstProductIndex, sumString, productString]);
+  // console.log([totalfirstSumIndex, totalfirstProductIndex, sumString, productString]);
   //        16                      140                  string       string
   return [totalfirstSumIndex, totalfirstProductIndex, sumString, productString];
   
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -96,7 +96,7 @@ function sumArray(sumArr) { //eslint-disable-line
   var sumOfArray0and1FirstIndex = sumOfArray0and1[0];
   var sumOfArrayIndexAnd2  = sum(sumOfArray0and1FirstIndex, testArray[2]);
   var totalSumOfArray = sumOfArrayIndexAnd2[0];
-  console.log('totalSumOfArray ' + totalSumOfArray); // returns ??
+  // console.log('totalSumOfArray ' + totalSumOfArray); 
   
 
   var sumArrayString = sumArr + ' was passed in as an array of numbers, and ' + totalSumOfArray + ' is their sum.';
@@ -122,11 +122,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+  var proOfArray0and1 = multiply(testArray[0], testArray[1]);
+  var proOfArray0and1FirstIndex = proOfArray0and1[0];
+  var proOfArrayIndexAnd2  = multiply(proOfArray0and1FirstIndex, testArray[2]);
+  var totalProOfArray = proOfArrayIndexAnd2[0];
+  // console.log('totalProOfArray ' + totalProOfArray); 
 
+  var multiplyArrayString = 'The numbers ' + testArray + ' have a product of ' + totalProOfArray + '.';
+  // console.log(multiplyArrayString);
+
+  return [totalProOfArray, multiplyArrayString];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
